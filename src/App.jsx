@@ -3,6 +3,7 @@
 import { Routes, Route, Link } from 'react-router-dom';
 import { Layout, Typography, Space } from 'antd';
 import { Navbar, Homepage, Exchanges, Cryptocurrencies, CryptoDetails, News } from './components';
+import NotFound from './components/PageNotFound';
 import './App.css';
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
               <Route path='/cryptocurrencies' element={<Cryptocurrencies />} />
               <Route path='/crypto/:coinId' element={<CryptoDetails />} />
               <Route path='/news' element={<News />} />
+              <Route component={NotFound} />
             </Routes>
           </div>
         </Layout>
